@@ -14,9 +14,21 @@
     <link rel="icon" type="image/png" href="img/genmojiCloud.png">
 </head>
 <!-- Above is the head where i include Tailwind as my CSS framework -->
+
 <body class="bg-[#2A2A2A] p-4">
-    <header></header>
-    <div class="max-w-6xl mx-auto w-full flex flex-col md:flex-row items-start md:items-stretch gap-6"> <!--"md" is for the screensize-->
+    <!--Button 4 Phones-->
+    <button id="button"
+        class="md:hidden w-full bg-[#3A3A3A] text-white p-4 rounded-xl flex items-center justify-between">
+        <p class="font-montserrat-alternates font-medium text-xl">Luke van Daelen</p>
+        <div class="space-y-1.5">
+            <div class="w-6 h-0.5 bg-white"></div>
+            <div class="w-6 h-0.5 bg-white"></div>
+            <div class="w-6 h-0.5 bg-white"></div>
+        </div>
+    </button>
+    <!--Correct Sizing-->
+    <div class="max-w-6xl mx-auto w-full flex flex-col md:flex-row items-start md:items-stretch gap-6">
+        <!--"md" is for the screensize-->
         <!--Profile + Contact -->
         <div class="w-full md:w-64 flex-shrink-0 bg-[#3A3A3A] text-white p-4 rounded-xl">
             <div class="bg-[#A88F7B]/50 rounded-xl flex items-center justify-center aspect-square w-36 mx-auto">
@@ -88,13 +100,21 @@
                     <p class="font-semibold text-lg">Software Developer - ROC Nijmegen (Technovium)</p>
                     <p>2025 - Present</p>
                     <p class="mt-2">Currently studying to become a software developer. My starting experiences are in:
-                        Java, JavaScript, HTML, CSS and Linux. I am also studying for myself in other languages/software to learn more.
+                        Java, JavaScript, HTML, CSS and Linux. I am also studying for myself in other languages/software
+                        to learn more.
                         Overall still exploring what i want to do after my education.</p>
                     <p class="mt-4 text-lg font-semibold">Skillwise</p>
                     <p class="">I'm good at working both independently and in a team, thinking logically to solve
                         problems, and trying to work as efficiently as possible.</p>
                 </div>
             </div>
+            <script>
+                const button = document.getElementById('button');
+                const profileSection = button.nextElementSibling;
+                button.addEventListener('click', () => {
+                    profileSection.classList.toggle('hidden');
+                });
+            </script>
         </main>
     </div>
 </body>

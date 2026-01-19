@@ -16,7 +16,17 @@
 <!-- Above is the head where i include Tailwind as my CSS framework -->
 
 <body class="bg-[#2A2A2A] p-4">
-    <header></header>
+    <!--Button 4 Phones-->
+    <button id="button"
+        class="md:hidden w-full bg-[#3A3A3A] text-white p-4 rounded-xl flex items-center justify-between">
+        <p class="font-montserrat-alternates font-medium text-xl">Luke van Daelen</p>
+        <div class="space-y-1.5">
+            <div class="w-6 h-0.5 bg-white"></div>
+            <div class="w-6 h-0.5 bg-white"></div>
+            <div class="w-6 h-0.5 bg-white"></div>
+        </div>
+    </button>
+    <!--Correct Sizing-->
     <div class="max-w-6xl mx-auto w-full flex flex-col md:flex-row items-start md:items-stretch gap-6">
         <!--Profile + Contact -->
         <div class="w-full md:w-64 flex-shrink-0 bg-[#3A3A3A] text-white p-4 rounded-xl">
@@ -87,33 +97,38 @@
                 <div class="h-9 w-40 bg-[#A88F7B]/50 mt-10 -mb-2 rounded-xl flex items-center">
                     <p class="text-[#E6CDB9] ml-5 text-base text-md">JavaScript</p>
                 </div>
-                    <div class="mt-6">
-                        <p class="font-semibold text-lg">Discord Bot</p>
-                        </a>
-                        <p>I felt bored and started to create a Discord Bot for myself in Linux with JavaScript.</p>
-                    </div>
-                <div class="h-9 w-40 bg-[#A88F7B]/50 mt-10 -mb-2 rounded-xl flex items-center">
-                        <p class="text-[#E6CDB9] ml-5 text-base text-md">Linux</p>
+                <div class="mt-6">
+                    <p class="font-semibold text-lg">Discord Bot</p>
+                    <p>I felt bored and started to create a Discord Bot for myself in Linux with JavaScript.</p>
                 </div>
-                    <div class="mt-6">
-                        <p class="font-semibold text-lg">Minecraft Server</p>
-                        </a>
-                        <p>My friends and i hated the lag on the free Minecraft servers, so i bought an old computer to
+                <div class="h-9 w-40 bg-[#A88F7B]/50 mt-10 -mb-2 rounded-xl flex items-center">
+                    <p class="text-[#E6CDB9] ml-5 text-base text-md">Linux</p>
+                </div>
+                <div class="mt-6">
+                    <p class="font-semibold text-lg">Minecraft Server</p>
+                    <p>My friends and i hated the lag on the free Minecraft servers, so i bought an old computer to
                         learn about Linux and set up a Minecraft server.</p>
-                    </div>
-                    <div class="mt-6">
-                        <p class="font-semibold text-lg">File Server (Nextcloud)</p>
-                        </a>
-                        <p>I wanted to work ahead for my own experience and bought another old computer to again, learn
+                </div>
+                <div class="mt-6">
+                    <p class="font-semibold text-lg">File Server (Nextcloud)</p>
+                    <p>I wanted to work ahead for my own experience and bought another old computer to again, learn
                         Linux, where i set up a Nextcloud server to store and share files. This
                         with the reason that i didn't want to pay for storage on the cloud, but rather have my own
                         personal cloud at home.
-                        </p>
-                    </div>
+                    </p>
+                </div>
                 <div class="h-10 w-43 bg-[#A88F7B]/50 mt-10 mb-1 rounded-xl flex items-center">
                     <a href="projects.html" class="text-[#E6CDB9] ml-5 text-base text-md hover:text-white">Back to
                         Projects</a>
                 </div>
+            </div>
+                <script>
+                    const button = document.getElementById('button');
+                    const profileSection = button.nextElementSibling;
+                    button.addEventListener('click', () => {
+                        profileSection.classList.toggle('hidden');
+                    });
+                </script>
         </main>
     </div>
 </body>

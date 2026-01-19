@@ -14,9 +14,19 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <!-- Above is the head where i include Tailwind as my CSS framework -->
+
 <body class="p-4">
-    <header></header>
     <div class="max-w-6xl mx-auto w-full flex flex-col md:flex-row items-start md:items-stretch gap-6">
+        <!--Button 4 Phones-->
+        <button id="button"
+            class="md:hidden w-full bg-[#3A3A3A] text-white p-4 rounded-xl flex items-center justify-between">
+            <p class="font-montserrat-alternates font-medium text-xl">Luke van Daelen</p>
+            <div class="space-y-1.5">
+                <div class="w-6 h-0.5 bg-white"></div>
+                <div class="w-6 h-0.5 bg-white"></div>
+                <div class="w-6 h-0.5 bg-white"></div>
+            </div>
+        </button>
         <!--Profile + Contact -->
         <div class="w-full md:w-64 flex-shrink-0 bg-[#3A3A3A] text-white p-4 rounded-xl">
             <div class="bg-[#A88F7B]/50 rounded-xl flex items-center justify-center aspect-square w-36 mx-auto">
@@ -97,6 +107,13 @@
             </div>
         </main>
     </div>
+    <script>
+        const button = document.getElementById('button');
+        const profileSection = button.nextElementSibling;
+        button.addEventListener('click', () => {
+            profileSection.classList.toggle('hidden');
+        });
+    </script>
 </body>
 
 </html>
